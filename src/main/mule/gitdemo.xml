@@ -12,5 +12,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<set-payload value="git demo project" doc:name="Set Payload" doc:id="2f971cb1-a7d6-422d-9c9e-86ef0f34a5b0" />
 		<logger level="INFO" doc:name="Logger" doc:id="5276ecbd-ed1a-4434-972d-8c369e0a5d88" />
 		<set-payload value="demo of gitdemo project" doc:name="Set Payload" doc:id="25eda780-d1bb-4934-87c3-f69c092c3c81" />
+		<logger level="INFO" doc:name="Logger" doc:id="be5a67de-19ad-4ee3-9ca3-49eca399a8f2" />
 	</flow>
 </mule>
