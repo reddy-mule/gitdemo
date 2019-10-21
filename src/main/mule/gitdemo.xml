@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="1354c491-270c-4c6e-8948-89413ba0caef" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="gitdemoFlow" doc:id="9fe92f9a-bb2a-49a2-be81-628e89e57823" >
+		<http:listener doc:name="Listener" doc:id="0bb32316-0d26-43a2-b2e5-95979834202a" config-ref="HTTP_Listener_config" path="/gitdemo1"/>
+		<set-payload value="git demo project" doc:name="Set Payload" doc:id="2f971cb1-a7d6-422d-9c9e-86ef0f34a5b0" />
+		<logger level="INFO" doc:name="Logger" doc:id="5276ecbd-ed1a-4434-972d-8c369e0a5d88" />
+		<set-payload value="demo of gitdemo project" doc:name="Set Payload" doc:id="25eda780-d1bb-4934-87c3-f69c092c3c81" />
+	</flow>
+</mule>
